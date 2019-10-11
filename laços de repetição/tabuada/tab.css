@@ -22,4 +22,11 @@ footer {
     text-align: center;
     font-style: italic;
 
+} 
+
+#j{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
 }
