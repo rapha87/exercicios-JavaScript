@@ -1,0 +1,46 @@
+body {
+    background:#7159c1;
+    font: normal 15pt Arial;
+}
+header {
+    color: black;
+    text-align: center;
+
+}
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0.363);
+}
+div {
+    padding: 10px;
+}
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+
+}
+div#res{
+    text-align: center;
+}
+#title {
+    border-radius: 30px;
+}
+#buton{
+    text-align: center;
+    background: green ;
+    border-radius: 20px;
+
+}
+
+#foto{
+    border-radius: 200px;
+    margin-top: 10px;
+}
+#b{
+    text-align: center
+}
