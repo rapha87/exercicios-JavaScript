@@ -4,7 +4,7 @@ function contar() {
     var step = document.querySelector('#txtstep')
     var res = document.querySelector('#res')
     if (start.value.length == 0 || end.value.length == 0 || step.value.length == 0) {
-        alert('[ERRO] prenencha todos os campos')
+        alert('[ERRO] preencha todos os campos')
     } else {
         res.innerHTML = 'contando:'
         var i = Number(start.value)
