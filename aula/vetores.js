@@ -1,4 +1,4 @@
-// ---> ARRAY <---
+// ------> ARRAY <------
 
 /*let num= [2, 8, 9, -3, 5, 1, 6]
 num.sort()
@@ -14,14 +14,14 @@ for(let pos= 0; pos<num.length; pos++){
 /*num.push(7)
 num.sort()
 console.log(num)
-console.log(`O vetor tem ${num.length} posições`)*/ 
+console.log(`O vetor tem ${num.length} posições`)*/
 
 /*---modo mais simplificado para array---*/
 /*for(let pos in num) {
     console.log(`A posição ${pos} tem o valor ${num[pos]}`)
 }*/
 
-// ---> AULA DE FUNÇAO <---
+// --> AULA DE FUNÇAO <--
 /*function parimp(n){
     if(n%2 == 0){
         return 'par'
@@ -38,11 +38,11 @@ let res = soma (31, 13)
 console.log(`A soma é ${res}`)
 //console.log(soma (16, 31))
 // ** jogando uma funçao dentro de uma váriavel
-let v = function(x) {
+*//*let v = function(x) {
     return x*2
 }
 console.log(v(5))
-function fatorial(n) {
+/*function fatorial(n) {
     let fat = 1
     for (let c = n; c > 1; c--) {
         fat *= c
@@ -53,12 +53,281 @@ function fatorial(n) {
 console.log(fatorial(5))*/
 // --> RECURSIVIDADE <--
 
-function fatorial(n) {
-    if(n==1) {
+/*function fatorial(n=0) {
+    if (n == 1 || n == 0) {
         return 1
-        
+
     } else {
-        return n * fatorial(n-1)
+        return n * fatorial(n - 1)
     }
 }
-console.log(fatorial(5))
+console.log(fatorial(2))*/
+
+
+
+/*function chirp(n) {
+    if (n < 1 || isNaN(n)) return;
+    return n < 2 ? 'chirp' : chirp(n - 1) + '-chirp';
+}
+console.log(chirp(3))
+function chirp(n) {
+    var ch = 'chirp'
+    if( n < 1 || isNaN(n) ) return
+    for( var i = n - 1; i--;) {
+      ch += '-chirp'
+    }
+    return ch
+}
+console.log(chirp(4))*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+const func = () => ({
+    nome : 'Marcus',
+    idade : 17
+
+})
+
+console.log(func())
+*/
