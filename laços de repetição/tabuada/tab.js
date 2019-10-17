@@ -1,7 +1,6 @@
 function tabuada(){
     var n= document.querySelector('#txtnum')
     var tab= document.querySelector('#num')
-    var res= document.querySelector('res')
     if(n.value.length == 0) {
         alert('{ERRO} Preencha o campo')
     } else {
