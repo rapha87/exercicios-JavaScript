@@ -3,6 +3,8 @@
 /*let num= [2, 8, 9, -3, 5, 1, 6]
 num.sort()
 let pos=num.indexOf(7)
+console.log(pos)
+
 if(pos == -1){
     console.log('O valor nao foi encontrado')
 } else{
@@ -78,7 +80,22 @@ function chirp(n) {
     }
     return ch
 }
-console.log(chirp(4))*/
+console.log(chirp(4))
+
+//--> object <--
+let amigo = {
+    nome:'marcus',
+    sexo:'M', 
+    peso:50,
+    engordar(p=0) {
+        console.log('engordou')
+        this.peso +=p
+    }
+}
+amigo.engordar()
+console.log(`${amigo.nome} pesa ${amigo.peso}`)*/
+
+
 
 
 
