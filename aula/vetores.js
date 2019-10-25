@@ -93,9 +93,88 @@ let amigo = {
     }
 }
 amigo.engordar()
-console.log(`${amigo.nome} pesa ${amigo.peso}`)*/
+console.log(`${amigo.nome} pesa ${amigo.peso}`)
 
 
+for (c = 0; c <= 100; c++) {
+    if (c % 3 == 0 && c % 5 == 0) {
+    console.log("pingpong")
+    }else if (c % 3 == 0) {
+            console.log("ping")
+    }else if (c % 5 == 0) {
+            console.log("pong")
+    }else {
+        console.log(c)
+    }
+}
+for(i=0; i<=50; i++){
+    if(i % 2==0){
+        continue
+    }
+    console.log(i)
+}
+//-->Usando o for of<--
+let array=[2, 65, 4, 8, 98]
+for(num of array){
+    console.log(`${array.indexOf(num)} na posição ${num}`)
+// -->um loop dentro de outro<--
+for(i=0; i<=10; i++){
+        for(c=1; c<=5; c++){
+            console.log(`i: ${i} j:${c}`)
+        }
+    }
+}
+function ola() {
+    console.log("olá mundo");
+    
+}
+for(i=1; i<=10; i++){
+    console.log(`${i}-${ola}`)
+}
+function somartudo(teste) {
+    
+}
+let teste=somartudo([3, 4, 9, 4, 6])
+console.log(Somar([5, 1, 2], 2));
+
+
+const array = [10,5,5,10]
+
+const soma = array.reduce((a,c) => a+c, 0)
+
+
+
+
+function somartudo(numeros){
+    let total= 0
+    for(var num of numeros){
+        total+=num
+    }
+    return total
+}
+console.log(soma)
+
+let array=[3, 5, 7, 43, 5, 8]
+let resultado= somartudo(array)
+console.log(resultado)
+;
+// -->funhção autoinvocavel<--
+(function autoExecuta(){
+    console.log('invocar');
+    
+}())
+// -->função call back<--
+function somacallback(a, b, fncallback){
+    return fncallback(a+b)
+}
+var mul= function(total) {
+    return total*2
+}
+console.log(somacallback(10, 3, mul));*/
+//--> object<--
+
+
+ 
 
 
 
