@@ -170,11 +170,317 @@ function somacallback(a, b, fncallback){
 var mul= function(total) {
     return total*2
 }
-console.log(somacallback(10, 3, mul));*/
+console.log(somacallback(10, 3, mul));
 //--> object<--
+let amigo = {
+    nome:'marcus',
+    sexo:'M', 
+    peso:50,
+    engordar(p=0) {
+        console.log('engordou')
+        this.peso +=p
+    }
+}
+amigo.engordar()
+console.log(`${amigo.nome} pesa ${amigo.peso}`)
 
 
- 
+let a = {
+    nome: 'Rafael',
+    idade: 17,
+    sexo: 'M',
+    pais: 'Brasil'
+}
+var props= Object.keys(a)
+for(b in a) {
+    console.log(`${b} = ${a[b]}`)
+    
+}
+for(b of props) {
+    console.log(a[b])
+}*/
+
+
+// --->usando this<---
+
+/*function usuario() {
+    this.nome= 'rafel'
+    this.idade=27;
+    this.soma= function(a,b) {
+        return a+b
+    }
+}
+
+//usuario()
+var Usuario= new usuario()
+console.log(Usuario)
+
+console.log(Usuario.nome)
+console.log(Usuario.idade)
+console.log(Usuario.soma(10, 4))
+
+//call
+function personagem(p1, p2, p3) {
+    console.log('personagem this', this)
+}
+var perso= {
+    nome: 'Rafael'
+}
+//personagem.call(perso, 'para', 123, [5])
+//usando applay
+var p = ['para', 123, [5, 3, 5]]
+personagem.apply(perso, p)
+
+//usando bind
+
+var b= personagem.bind(perso)
+b( 'olá', 'mundo', '!!!')
+
+
+
+//-->Object<--
+
+let usuario= {
+    nome: 'rafael',
+    idade: 16,
+    curso: 'estagio NTI',
+    'sobre-nome': 'santos', //quando for usar o hifen, é necessario colocar entre aspas('')
+    competencias : ['java', 'php', 'java', 'c++']
+}
+usuario.ano= 2019
+console.log(usuario)
+
+for(i in usuario) {
+        console.log(`${i} = ${usuario[i]}`)
+}
+ //vai percorre o objeto e colocar seu id
+Object.keys(usuario).forEach(function(item){
+    console.log(`${item} = ${usuario[item]}`);
+});
+
+var n= {
+    digaoi(nome){//dentro do objeto nao e preciso usar o termo "function" e nem ":"
+        return `olá ${nome}` 
+    }
+}
+console.log(n.digaoi('rafael'))
+
+var cor= 'rosa'
+var r= {
+    nome : 'rafael',
+    cor // se tiver uma variavel igual a do objeto so é preciso repetir uma vez
+}
+console.log(r)
+
+
+let usuario= {
+    nome: 'rafael',
+    idade: 16,
+    curso: 'estagio NTI'
+}
+let es= {
+    escola: 'liceu',
+    ano: 2,
+    turma: 201
+}
+
+//var merge= Object.assign({}, usuario, es)
+var merge= {
+    ...usuario,
+    ...es
+}
+console.log(merge)
+let ja = [
+    a = {
+        nome: 'joão',
+        idade: 18
+    },
+    b = {
+        nome: 'marcus',
+        idade: 17
+    },
+    c = {
+        nome: 'alex',
+        idade: 16
+    }
+]
+//console.log(ja[0].idade)
+var ja2= {
+    posição:0,
+    get atual () {
+        return ja[this.posição]
+    },
+    set atual (posição) {
+        this.posição= posição
+    },
+    proximo() {
+        ++this.posição
+    },
+    anterior() {
+        --this.posição
+    }
+}
+console.log(ja2.atual)
+ja2.proximo()
+
+console.log(ja2.atual)
+
+ja2.proximo()
+console.log(ja2.atual)
+
+ja2.anterior()
+console.log(ja2.atual)
+
+ja2.atual=0
+console.log(ja2.atual)
+
+
+ja2.atual=2
+console.log(ja2.atual)
+const r = {
+    j: {
+        nome: 'rafael',
+        idade: 17,
+        rua: 10
+    }
+}
+var { j: { rua ='joao do vale' } } =r //caso nao existir o elemento n objeto ele vai assumir um valor padrão
+console.log(rua)
+
+function r({nome, idade, sexo, pais='japão'}) {
+    for(i in {nome, idade, sexo, pais} ){
+        console.log(`${nome, idade, sexo, pais[i]}`)
+    }
+}
+ var t= {
+     nome: 'rafael',
+     idade: 16,
+     sexo: 'M',
+     pais: 'Brasil'
+ }
+ console.log(Object.keys(t))
+ console.log(Object.values(t))
+ if(true) {
+    var r= 'programdor'
+    let autor= 'rafael'
+    console.log(r)
+    console.log(autor)
+}
+console.log(r)
+console.log(autor)
+
+// -->clojures<--
+function imprimirnome(nome) {
+    return function() {
+        console.log(nome, 'santos')
+    }
+}
+function inicializar() {
+    let nome = 'Rafael'
+    setTimeout(imprimirnome(nome), 2000milissegundo)
+}
+inicializar()
+
+const a = [1,2, 3, 4]
+a.push(9)
+console.log(a)
+
+//arrow function
+var soma = (a, b) => {
+    return a+b
+}
+console.log(soma(10, 3))
+
+//hoisting
+console.log(a)
+var a= 123
+
+console.log(b)
+let b= 123
+
+console.log(c)
+const c= 123
+
+console.log(a(12, 6))
+function a(b, c) {
+    return b+c   
+}*/
+
+//map, fiter e reduce
+//const num = [2, 3, 6, 5, 10]
+//let narraynumeros= []
+/*for(i=0; i< num.length; i++) {
+    narraynumeros.push(num[i]*2)
+}
+
+
+const novoarraymap= num.map(function (num) {
+    return num *2
+    
+})
+console.log(novoarraymap)
+//usando map e arrow function
+const modomaisfacil= num.map(num=> num*2)
+console.log(modomaisfacil)
+
+//filter
+const c= num.filter(num => num % 2==0)
+console.log(c)
+//usando map e filter
+const mapfilter= num.filter(num=> num%2==0).map(num=>num*2)
+console.log(mapfilter)
+
+//usando reduce
+const valorTotal=num.reduce(function(valorAcumulador, valorArray) {
+    return valorAcumulador+valorArray
+}, 0)
+console.log(valorTotal)
+
+const somaReduce= num.reduce((valorAcumulador,
+    valorArray)=>valorAcumulador+valorArray, 0)
+console.log(somaReduce)
+
+const array = [
+    {
+        nome: 'rafael',
+        idade: 17
+    },
+    {
+        nome: 'marcus',
+        idade=18
+    },
+    {
+        nome: 'jessica',
+        idade: 19
+    },
+    {
+        nome: 'alex',
+        idade: 16
+    }
+]
+const usandoreduce = array.reduce(function (valorAcumulador, valorArray) {
+    const maiorOUmenor = valorArray.idade >= 18 ? 'maiores' : 'menores'
+    valorAcumulador[maiorOUmenor].push(valorArray)
+    return valorAcumulador
+}, { maiores:[] , menores:[]})
+
+console.log(usandoreduce)*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
